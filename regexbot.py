@@ -4,7 +4,7 @@ from collections import defaultdict, deque
 
 from telethon import TelegramClient, events
 
-SED_PATTERN = r'^s/((?:\\/|[^/])+)/((?:\\/|[^/])*)(/.*)?'
+SED_PATTERN = r'^s/((?:\\\S|[^/])+)/((?:\\\S|[^/])*)(/.*)?'
 GROUP0_RE = re.compile(r'(?<!\\)((?:\\\\)*)\\0')
 
 bot = TelegramClient(None, 6, 'eb06d4abfb49dc3eeb1aeb98ae0f581e')
